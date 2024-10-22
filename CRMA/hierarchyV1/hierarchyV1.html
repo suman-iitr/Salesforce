@@ -1,0 +1,50 @@
+<template>
+  <lightning-card style="color: rgb(9, 26, 62); width: 500px !important;">
+    <h1 slot="title" style="font-size: 0.8em;">{editabletitle}</h1>
+		<button slot="actions" class="slds-float_right slds-dropdown-trigger slds-dropdown-trigger_click" style="margin-right: 20px;" tabindex="0" type="button" onclick={openModal} aria-expanded="true" aria-haspopup="true" onfocusout={onFocusOut}>
+			<svg aria-hidden="true" class="slds-button__icon slds-button__icon_small" viewBox="0 0 52 52">
+				<path d="M8.3 14h35.4c1 0 1.7 1.3.9 2.2L27.3 37.4c-.6.8-1.9.8-2.5 0L7.3 16.2c-.7-.9-.1-2.2 1-2.2z"></path>
+			</svg>
+			<span class="slds-assistive-text">Dropdown icon to open menu</span>
+		</button>
+	</lightning-card>
+ 
+	<template if:true={items}>
+    <c-hierarchy-modal items={items} onselected={handleSelect} lwc:ref="hierarchyModal"></c-hierarchy-modal>
+  </template>
+
+    <!--<div class="slds-align_absolute-center" >
+
+        <lightning-card  title="Role Hierarchy" style="width: 100% !important;">
+          <button slot="actions" class="slds-float_right slds-dropdown-trigger slds-dropdown-trigger_click" style tabindex="0" type="button" onclick={handleOnClick} aria-expanded="true" aria-haspopup="true">
+            <svg aria-hidden="true" class="slds-button__icon slds-button__icon_small" viewBox="0 0 52 52">
+              <path d="M8.3 14h35.4c1 0 1.7 1.3.9 2.2L27.3 37.4c-.6.8-1.9.8-2.5 0L7.3 16.2c-.7-.9-.1-2.2 1-2.2z"></path></svg>
+              <span class="slds-assistive-text">Dropdown icon to open menu</span>
+            </button>
+
+          <div class={classNames} id="_LLZWi7xjT" style="width: 100% !important;">
+    
+            <div class="portal-positioned ignore-click-koQP_3Amu ignore-react-onclickoutside slds-popover dropdown-menu slds-dropdown slds-dropdown_large slds-text-align_left ignore-react-onclickoutside action-dropdown-item-options-menu slds-dropdown_top slds-dropdown_right" 
+                  style="outline: 0px;position: inherit;right: auto;top: auto;left: auto;width: 100% !important; height:auto;">
+              <ul aria-labelledby="HGPmPMDYkhv" class="dropdown__list slds-dropdown_length-10" role="menu">
+                
+                <div class="slds-form-element">
+                  <div class="slds-form-element__control">
+                    <input type="text" id="text-input-id-47" placeholder="Filter" required="" class="slds-input" onkeydown={handleFilterChange} />
+                  </div>
+                </div>
+                <li class="slds-dropdown__item" id="HGPmPMDYkhv-item-0" role="presentation">
+                  <a href="#" data-index="0" role="menuitem" tabindex="-1">
+                    <span class="slds-truncate" title="Roles">
+                      <div class="slds-scrollable" style="height: 100%; width: 100%" tabindex="0">
+                        <lightning-tree items={filteredItems} onselect={handleSelect}> </lightning-tree>
+                      </div>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </lightning-card>
+    </div>-->
+</template>

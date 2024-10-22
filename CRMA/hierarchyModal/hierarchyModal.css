@@ -1,0 +1,22 @@
+.custom-drop-down {
+    position: absolute;
+    left: 50%;
+    float: left;
+    min-width: var(--lwc-sizeXxSmall,6rem);
+    margin-top: var(--lwc-spacingXxxSmall,0.125rem);
+    margin-bottom: var(--lwc-spacingXxxSmall,0.125rem);
+    border: var(--lwc-borderWidthThin,1px) solid var(--slds-g-color-border-base-4, var(--lwc-colorBorder,rgb(229, 229, 229)));
+    border-radius: var(--lwc-borderRadiusMedium,0.25rem);
+    padding: var(--lwc-spacingXxSmall,0.25rem) 0;
+    background: var(--slds-g-color-neutral-base-100, var(--lwc-colorBackgroundAlt,rgb(255, 255, 255)));
+    box-shadow: var(--lwc-shadowDropDown,0 2px 3px 0 rgba(0, 0, 0, 0.16));
+    transform: translateX(-50%);
+    color: var(--slds-g-color-neutral-base-10, var(--lwc-colorTextDefault,rgb(24, 24, 24)));
+}
+
+.custom-drop-down-modal {
+    border: solid; 
+    border-width: 1px; 
+    width: fit-content; 
+    height: fit-content;
+}

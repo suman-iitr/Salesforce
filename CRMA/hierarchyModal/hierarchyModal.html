@@ -1,0 +1,34 @@
+<template>
+    <template if:true={open}>
+        <section aria-modal="true" class="custom-drop-down-modal slds-modal slds-fade-in-open" style={modalPosition} onfocusout={handleCardFocusOut} onfocusin={handleCardFocusIn}>
+            <div class="slds-modal__container " style="width: fit-content; padding:0px;">
+                <div class="slds-modal__content">
+                    <div class="slds-align_absolute-center" >
+                        <div class={classNames} id="_LLZWi7xjT" style="width: 100% !important;">
+                            <lightning-button class="slds-float_right" label="Clear Selection" onclick={clearFilter} variant="base"></lightning-button>
+                            <div class="slds-dropdown slds-dropdown_large slds-text-align_left ignore-react-onclickoutside action-dropdown-item-options-menu slds-dropdown_top slds-dropdown_right" 
+                                style="outline: 0px;position: inherit;right: auto;top: auto;left: auto;width: 100% !important; height:auto;">
+                                <ul aria-labelledby="HGPmPMDYkhv" class="dropdown__list slds-dropdown_length-10" role="menu">
+                                    <div class="slds-form-element">
+                                        <div class="slds-form-element__control">
+                                            <input type="text" id="text-input-id-47" placeholder="Filter" required="" class="slds-input" value={filterValue} onkeyup={handleFilterChange} autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                    <li class="slds-dropdown__item" id="HGPmPMDYkhv-item-0" role="presentation">
+                                        <a href="#" data-index="0" role="menuitem" tabindex="-1">
+                                            <span class="slds-truncate" title="Roles">
+                                                <div class="slds-scrollable" style="height: 100%; width: 100%" tabindex="0">
+                                                    <lightning-tree lwc:ref="hierarchyTree" selected-item={selectedItem} items={filteredItems} onselect={handleSelect} onfocusout={handleTreeFocusOut} onfocusin={handleTreeFocusIn}></lightning-tree>
+                                                </div>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</template>
